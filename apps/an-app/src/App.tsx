@@ -2,7 +2,7 @@ import { Button } from "ui";
 
 const App = () => (
   <div className="App">
-    <Button />
+    <Button label="a" />
     <p>AN APP</p>
   </div>
 );
