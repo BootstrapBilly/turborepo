@@ -1,7 +1,0 @@
-{
-  "extends": "tsconfig/react.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "noEmit": true
-  }
-}
