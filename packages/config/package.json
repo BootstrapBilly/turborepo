@@ -4,10 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "files": [
-    "eslint-next.js",
-    "eslint-server.js",
-    "jest-next.js",
-    "jest-server.js"
+    "eslint-react.js",
+    "jest-react.js",
+    "jest.js"
   ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.7.0",

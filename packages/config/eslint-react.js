@@ -24,6 +24,7 @@ module.exports = {
         },
     },
     rules: {
+        "import/prefer-default-export": "off",
         "react/react-in-jsx-scope": "off",
         "no-console": "off",
         'react/function-component-definition': [
@@ -42,5 +43,20 @@ module.exports = {
         'coverage',
         'dist',
         '.turbo',
+    ],
+    overrides: [
+        {
+            env: {
+                jest: true,
+            },
+            files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+            extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+            rules: {
+                'import/no-extraneous-dependencies': [
+                    'off',
+                    { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
+                ],
+            },
+        },
     ],
 }
