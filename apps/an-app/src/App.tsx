@@ -6,7 +6,7 @@ const App = () => (
   <div className="App" data-testid="app_container">
     <Button label="a" />
     <Input />
-    <p>AN APP</p>
+    <p>AN APPLE</p>
   </div>
 );
 
