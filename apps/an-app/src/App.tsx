@@ -1,10 +1,11 @@
 import React from "react";
-import { Button } from "ui";
+import { Button, Header } from "ui";
 import { Input } from "./components";
 
 const App = () => (
   <div className="App" data-testid="app_container">
     <Button label="a" />
+    <Header>Hi</Header>
     <Input />
     <p>AN APPLE</p>
   </div>

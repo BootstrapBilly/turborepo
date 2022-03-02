@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+
 export interface ButtonProps {
   label: "a" | "b";
 }
@@ -9,8 +9,8 @@ const ButtonContainer = styled.button`
   background-color: blue;
 `;
 
-const Button = (props: ButtonProps) => {
-  return <ButtonContainer>{props.label}</ButtonContainer>;
-};
+const Button = ({ label }: ButtonProps) => (
+  <ButtonContainer>{label}</ButtonContainer>
+);
 
 export default Button;
