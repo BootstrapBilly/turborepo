@@ -1,77 +1,50 @@
-# Turborepo starter
+# What is it? 
 
-This is an official Yarn v1 starter turborepo.
+This is a typescript monorepo
 
-## What's inside?
+## Apps
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+<b>Frontend clients</b>
 
-### Apps and Packages
+- `an-app`: a React app
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+## Packages
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+<b>Shared logic and config</b>
 
-### Utilities
+- `config`: shared eslint and jest configs
+- `tsconfig`: shared tsconfigs
+- `ui`: a react component library bundled using rollup
 
-This turborepo has some additional tools already setup for you:
+## Services
+<b>Microservices and backends, coming soon</b>
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Commands
 
-## Setup
+### Root level commands
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+` yarn install ` - run this at the root level to install all dependencies in all apps/packages/services
 
-### Build
+` yarn build ` - run this at the root level to build everything simultaneously 
 
-To build all apps and packages, run the following command:
+` yarn dev` - run this at the root level to run everything simultaneously 
 
-```
-cd my-turborepo
-yarn run build
-```
+` yarn test` - run this at the root level to test everything everything simultaneously 
 
-### Develop
+### Scoped commands
 
-To develop all apps and packages, run the following command:
+` yarn build --scope="ui"` - build a specific app/package/service
 
-```
-cd my-turborepo
-yarn run dev
-```
+` yarn dev --scope="an-app"` - run a specific app/package/service
 
-### Remote Caching
+` yarn test --scope="an-app"` - test a specific app/package/service
 
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+### Installing specific packages
 
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+`yarn workspace an-app add -D typescript` -  install typescript into the an-app client
 
-```
-cd my-turborepo
-npx turbo login
-```
+`yarn add -D -W typescript` - install typescript into the root of the project
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Pipelines
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/features/pipelines)
-- [Caching](https://turborepo.org/docs/features/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/features/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+<b>.github/workflows/an-app</b> -  a pipeline to build and test any changes commited to an-app client (deploy to s3 coming soon)
