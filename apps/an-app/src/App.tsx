@@ -4,7 +4,7 @@ import { Input } from "./components";
 
 const App = () => (
   <div className="App" data-testid="app_container">
-    <Button label="a" />
+    <Button label="button" />
     <Header>Hi</Header>
     <Input />
     <p>AN APPLE</p>
