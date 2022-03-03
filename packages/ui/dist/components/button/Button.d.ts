@@ -2,5 +2,5 @@
 export interface ButtonProps {
     label: "a" | "b";
 }
-declare const Button: (props: ButtonProps) => JSX.Element;
+declare const Button: ({ label }: ButtonProps) => JSX.Element;
 export default Button;

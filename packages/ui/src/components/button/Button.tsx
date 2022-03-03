@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export interface ButtonProps {
-  label: "a" | "b";
+  label: string;
 }
 
 const ButtonContainer = styled.button`
