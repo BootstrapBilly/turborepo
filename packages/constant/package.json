@@ -1,0 +1,21 @@
+{
+  "name": "constant",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "ts-types": "tsc --emitDeclarationOnly --outDir dist",
+    "build": "rimraf dist && node ./esbuild.mjs && npm run ts-types"
+  },
+  "devDependencies": {
+    "config": "*",
+    "esbuild": "^0.14.24",
+    "esbuild-node-externals": "^1.4.1",
+    "rimraf": "^3.0.2"
+  }
+}

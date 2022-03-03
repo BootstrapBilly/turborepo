@@ -1,13 +1,14 @@
 import React from "react";
-import { Button, Header } from "ui";
-import { Input } from "./components";
+import "./App.css";
+import { OFF_WHITE } from "constant";
 
 const App = () => (
-  <div className="App" data-testid="app_container">
-    <Button label="button" />
-    <Header>Hi</Header>
-    <Input />
-    <p>AN APPLE</p>
+  <div
+    className="App"
+    data-testid="app_container"
+    style={{ backgroundColor: OFF_WHITE.default }}
+  >
+    a
   </div>
 );
 

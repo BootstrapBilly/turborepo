@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/react-component-library.json",
+  "compilerOptions": {
+    "declarationDir": "dist",
+    "outDir": "dist"
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules", "**/*.test.tsx"]
+}
