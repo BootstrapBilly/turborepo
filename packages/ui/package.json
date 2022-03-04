@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "ts-types": "tsc --emitDeclarationOnly --outDir dist",
+    "ts-types": "tsc -p tsconfig.build.json --emitDeclarationOnly --outDir dist",
     "build": "rimraf dist && node ./esbuild.mjs && npm run ts-types",
     "test": "jest --coverage",
     "lint": "eslint src --fix"

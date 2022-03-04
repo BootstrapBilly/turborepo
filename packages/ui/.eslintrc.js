@@ -1,11 +1,8 @@
 module.exports = {
-    ...require("config/eslint-react"),
+    ...require("config/eslint-react-library"),
     parserOptions: {
         root: true,
         tsconfigRootDir: __dirname,
         project: ["./tsconfig.json"]
-    },
-    rules: {
-        "import/no-extraneous-dependencies": 0,
     }
 }

@@ -9,6 +9,6 @@ const HeaderContainer = styled.div`
   background-color: red;
 `;
 
-const Header = ({ children }: IHeaderProps) => <HeaderContainer>{children}</HeaderContainer>;
+const Header = ({ children }: IHeaderProps) => <HeaderContainer>{children}</HeaderContainer>
 
 export default Header;

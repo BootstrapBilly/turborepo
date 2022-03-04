@@ -9,8 +9,6 @@ const ButtonContainer = styled.button`
   background-color: blue;
 `;
 
-const Button = ({ label }: ButtonProps) => (
-  <ButtonContainer>{label}</ButtonContainer>
-);
+const Button = ({ label }: ButtonProps) => <ButtonContainer>{label}</ButtonContainer>
 
 export default Button;
