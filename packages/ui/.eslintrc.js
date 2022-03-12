@@ -1,5 +1,5 @@
 module.exports = {
-    ...require("config/eslint-react"),
+    ...require("config/eslint-base"),
     parserOptions: {
         root: true,
         tsconfigRootDir: __dirname,

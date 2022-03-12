@@ -26,19 +26,7 @@ module.exports = {
     rules: {
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
-        "react/react-in-jsx-scope": "off",
         "no-console": "off",
-        'react/function-component-definition': [
-            2,
-            {
-                namedComponents: 'arrow-function',
-            },
-        ],
-        "jsx-a11y/label-has-associated-control": ["error", {
-            "required": {
-                "some": ["nesting", "id"]
-            }
-        }],
     },
     ignorePatterns: [
         '**/*.js',
@@ -52,17 +40,28 @@ module.exports = {
     ],
     overrides: [
         {
+            files: ["**/*.tsx"],
+            rules: {
+                "react/react-in-jsx-scope": "off",
+                'react/function-component-definition': [
+                    2,
+                    {
+                        namedComponents: 'arrow-function',
+                    },
+                ],
+                "jsx-a11y/label-has-associated-control": ["error", {
+                    "required": {
+                        "some": ["nesting", "id"]
+                    }
+                }],
+            }
+        },
+        {
+            files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
             env: {
                 jest: true,
             },
-            files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
             extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
-            rules: {
-                'import/no-extraneous-dependencies': [
-                    'off',
-                    { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
-                ],
-            },
         },
     ],
-}
+};

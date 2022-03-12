@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "files": [
+    "eslint-base.js",
     "eslint-react.js",
     "jest-react.js",
     "jest.js"
