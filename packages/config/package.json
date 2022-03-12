@@ -5,7 +5,6 @@
   "license": "MIT",
   "files": [
     "eslint-react.js",
-    "eslint-react-library.js",
     "jest-react.js",
     "jest.js"
   ],

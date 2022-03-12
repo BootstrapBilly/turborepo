@@ -6,6 +6,7 @@
   "files": [
     "base.json",
     "react.json",
-    "react-component-library.json"
+    "react-component-library.json",
+    "server.json"
   ]
 }

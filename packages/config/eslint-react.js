@@ -25,6 +25,7 @@ module.exports = {
     },
     rules: {
         "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
         "react/react-in-jsx-scope": "off",
         "no-console": "off",
         'react/function-component-definition': [
@@ -32,7 +33,12 @@ module.exports = {
             {
                 namedComponents: 'arrow-function',
             },
-        ]
+        ],
+        "jsx-a11y/label-has-associated-control": ["error", {
+            "required": {
+                "some": ["nesting", "id"]
+            }
+        }],
     },
     ignorePatterns: [
         '**/*.js',
