@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/colors.ts"],
-  "sourcesContent": ["export const OFF_WHITE = {\r\n  default: \"#fbf7f5\",\r\n};\r\n"],
-  "mappings": "AAAO,GAAM,GAAY,CACvB,QAAS",
-  "names": []
-}
