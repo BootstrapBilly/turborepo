@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export interface IHeaderProps {
@@ -9,6 +10,8 @@ const HeaderContainer = styled.div`
   background-color: red;
 `;
 
-const Header = ({ children }: IHeaderProps) => <HeaderContainer>{children}</HeaderContainer>
+const Header = ({ children }: IHeaderProps) => (
+  <HeaderContainer>{children}</HeaderContainer>
+);
 
 export default Header;
