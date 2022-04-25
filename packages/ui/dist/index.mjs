@@ -13,7 +13,8 @@ import React2 from "react";
 import styled2 from "styled-components";
 var HeaderContainer = styled2.div`
   display: flex;
-  background-color: red;
+  background-color: white;
+  padding: 10px 0;
 `;
 var Header = ({ children }) => /* @__PURE__ */ React2.createElement(HeaderContainer, null, children);
 var Header_default = Header;

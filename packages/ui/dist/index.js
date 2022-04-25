@@ -42,7 +42,8 @@ var import_react2 = __toESM(require("react"));
 var import_styled_components2 = __toESM(require("styled-components"));
 var HeaderContainer = import_styled_components2.default.div`
   display: flex;
-  background-color: red;
+  background-color: white;
+  padding: 10px 0;
 `;
 var Header = ({ children }) => /* @__PURE__ */ import_react2.default.createElement(HeaderContainer, null, children);
 var Header_default = Header;

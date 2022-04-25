@@ -7,7 +7,8 @@ export interface IHeaderProps {
 
 const HeaderContainer = styled.div`
   display: flex;
-  background-color: red;
+  background-color: white;
+  padding: 10px 0;
 `;
 
 const Header = ({ children }: IHeaderProps) => (
