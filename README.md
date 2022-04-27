@@ -6,18 +6,21 @@ This is a typescript monorepo
 
 <b>Frontend clients</b>
 
-- `an-app`: a React app
+- `an-app`: a React app for testing purposes
 
 ## Packages
 
 <b>Shared logic and config</b>
 
 - `config`: shared eslint and jest configs
+- `constant`: constant values such as colours
+- `server-common`: common logic to be shared between services
 - `tsconfig`: shared tsconfigs
 - `ui`: a react component library bundled using rollup
 
 ## Services
-<b>Microservices and backends, coming soon</b>
+
+- `auth`: authentication service used to signup/login ect
 
 ## Commands
 
@@ -30,6 +33,8 @@ This is a typescript monorepo
 ` yarn dev` - run this at the root level to run everything simultaneously 
 
 ` yarn test` - run this at the root level to test everything everything simultaneously 
+
+` skaffold dev` - run this at the root level to spin up a kubernetes cluster with all the services inside of it
 
 ### Scoped commands
 
