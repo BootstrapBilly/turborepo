@@ -11,4 +11,4 @@ WORKDIR /services/auth
 
 RUN npm install --only=prod
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev:service"]

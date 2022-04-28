@@ -13,6 +13,5 @@ build:
       docker:
         dockerfile: services/auth/Dockerfile
       sync:
-        manual:
-          - src: "services/auth/src/**/*.ts"
-            dest: .
+        infer:
+          - "**/*.ts"
