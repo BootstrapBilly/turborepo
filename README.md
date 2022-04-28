@@ -34,6 +34,8 @@ Next, run the packages and client applications
 
 Lastly, run the services, via kubernetes (requires skaffold to be installed)
 
+`skaffold dev`
+
 ## Commands
 
 ### Root level commands
