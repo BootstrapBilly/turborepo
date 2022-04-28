@@ -1,4 +1,4 @@
-# What is it? 
+# What is it?
 
 This is a typescript monorepo
 
@@ -22,17 +22,29 @@ This is a typescript monorepo
 
 - `auth`: authentication service used to signup/login ect
 
+## Getting started
+
+First install all dependencies in the repo
+
+`yarn install`
+
+Next, run the packages and client applications
+
+`yarn dev`
+
+Lastly, run the services, via kubernetes (requires skaffold to be installed)
+
 ## Commands
 
 ### Root level commands
 
-` yarn install ` - run this at the root level to install all dependencies in all apps/packages/services
+`yarn install` - run this at the root level to install all dependencies in all apps/packages/services
 
-` yarn build ` - run this at the root level to build everything simultaneously 
+`yarn build` - run this at the root level to build everything simultaneously
 
-` yarn dev` - run this at the root level to run everything simultaneously 
+` yarn dev` - run this at the root level to run all packages and clients simultaneously
 
-` yarn test` - run this at the root level to test everything everything simultaneously 
+` yarn test` - run this at the root level to test everything everything simultaneously
 
 ` skaffold dev` - run this at the root level to spin up a kubernetes cluster with all the services inside of it
 
@@ -46,10 +58,10 @@ This is a typescript monorepo
 
 ### Installing specific packages
 
-`yarn workspace an-app add -D typescript` -  install typescript into the an-app client
+`yarn workspace an-app add -D typescript` - install typescript into the an-app client
 
 `yarn add -D -W typescript` - install typescript into the root of the project
 
 ### Pipelines
 
-<b>.github/workflows/an-app</b> -  a pipeline to build and test any changes commited to an-app client (deploy to s3 coming soon)
+<b>.github/workflows/an-app</b> - a pipeline to build and test any changes commited to an-app client (deploy to s3 coming soon)
