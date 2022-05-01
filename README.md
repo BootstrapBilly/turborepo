@@ -14,7 +14,7 @@ This is a typescript monorepo
 
 - `config`: shared eslint and jest configs
 - `constant`: constant values such as colours
-- `server-common`: common logic to be shared between services
+- `service-common`: common logic to be shared between services
 - `tsconfig`: shared tsconfigs
 - `ui`: a react component library bundled using rollup
 

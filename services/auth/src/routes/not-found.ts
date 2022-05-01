@@ -1,6 +1,6 @@
 import express from "express";
 import "express-async-errors";
-import { NotFoundError } from "server-common";
+import { NotFoundError } from "service-common";
 
 const router = express.Router();
 

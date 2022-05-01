@@ -3,7 +3,7 @@ import { Password } from "./../util/password";
 import express, { Request, Response } from "express";
 import { User } from "../models";
 import { body } from "express-validator";
-import { validateRequest, BadRequestError } from "server-common";
+import { validateRequest, BadRequestError } from "service-common";
 
 const router = express.Router();
 

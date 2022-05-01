@@ -39,7 +39,7 @@
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.7",
-    "server-common": "file:../../packages/server-common",
+    "service-common": "file:../../packages/service-common",
     "ts-node-dev": "^1.1.8"
   }
 }

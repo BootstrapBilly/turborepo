@@ -1,5 +1,5 @@
 import express from "express";
-import { errorHandler } from "server-common";
+import { errorHandler } from "service-common";
 import {
   currentUserRouter,
   notFoundRouter,
