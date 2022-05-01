@@ -15,3 +15,10 @@ build:
       sync:
         infer:
           - "**/*.ts"
+    - image: billycatchpole/mealplan
+      context: .
+      docker:
+        dockerfile: services/mealplan/Dockerfile
+      sync:
+        infer:
+          - "**/*.ts"
