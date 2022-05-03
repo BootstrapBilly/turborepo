@@ -5,16 +5,14 @@ import { IMealDocument } from "./Meal";
 
 interface IDayAttrs {
   name: string;
-  date: Date;
   userId: ObjectId;
   meals: IMealDocument[];
   target: IMealNutrition;
   actual: IMealNutrition;
 }
 
-interface IDayDocument extends mongoose.Document {
+export interface IDayDocument extends mongoose.Document {
   name: string;
-  date: Date;
   userId: ObjectId;
   meals: IMealDocument[];
   target: IMealNutrition;
@@ -29,10 +27,6 @@ const daySchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
-    },
-    date: {
-      type: mongoose.Schema.Types.Date,
       required: true,
     },
     userId: {
@@ -60,10 +54,9 @@ const daySchema = new mongoose.Schema(
   },
 );
 
-daySchema.statics.addNew = ({ name, date, userId }: IDayAttrs) => {
+daySchema.statics.addNew = ({ name, userId }: IDayAttrs) => {
   return new Day({
     name,
-    date,
     userId,
   });
 };
