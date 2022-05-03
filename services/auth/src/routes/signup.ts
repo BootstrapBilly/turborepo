@@ -3,6 +3,8 @@ import { body } from "express-validator";
 import { User } from "../models";
 import jwt from "jsonwebtoken";
 import { validateRequest, BadRequestError } from "service-common";
+import { AccountCreatedPublisher } from "../events";
+import { natsWrapper } from "../nats-wrapper";
 
 const router = express.Router();
 
@@ -44,6 +46,10 @@ router.post(
     req.session = {
       jwt: token,
     };
+
+    await new AccountCreatedPublisher(natsWrapper.client).publish({
+      userId: user.id,
+    });
 
     return res.status(201).json(user);
   },
