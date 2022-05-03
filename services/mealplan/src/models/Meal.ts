@@ -9,7 +9,6 @@ interface IMealAttrs {
   userId: ObjectId;
   items: IFoodItemDocument[];
   nutrition: IMealNutrition;
-  substitute?: IMealNutrition;
 }
 
 export interface IMealDocument extends mongoose.Document {
@@ -18,7 +17,6 @@ export interface IMealDocument extends mongoose.Document {
   userId: ObjectId;
   items: IFoodItemDocument[];
   nutrition: IMealNutrition;
-  substitute?: IMealNutrition;
 }
 
 interface IMealModel extends mongoose.Model<IMealDocument> {
@@ -46,7 +44,6 @@ const mealSchema = new mongoose.Schema(
       },
     ],
     nutrition: MealNutrition,
-    substitute: MealNutrition,
   },
   {
     toJSON: {
@@ -60,17 +57,11 @@ const mealSchema = new mongoose.Schema(
   },
 );
 
-mealSchema.statics.addNew = ({
-  name,
-  time,
-  nutrition,
-  substitute,
-}: IMealAttrs) => {
+mealSchema.statics.addNew = ({ name, time, nutrition }: IMealAttrs) => {
   return new Meal({
     name,
     time,
     nutrition,
-    substitute,
   });
 };
 
