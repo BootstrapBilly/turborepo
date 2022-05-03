@@ -1,3 +1,3 @@
 export enum Subjects {
-  Placeholder = "placeholder",
+  AccountCreated = "account:created",
 }
