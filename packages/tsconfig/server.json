@@ -3,6 +3,7 @@
   "display": "Server",
   "extends": "./base.json",
   "compilerOptions": {
-    "module": "commonjs"
+    "module": "commonjs",
+    "target": "ESNEXT"
   }
 }

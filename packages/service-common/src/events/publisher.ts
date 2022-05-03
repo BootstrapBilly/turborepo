@@ -32,7 +32,6 @@ export abstract class Publisher<T extends Event> {
         }
 
         resolve();
-        console.log("Event published");
       });
     });
   }
