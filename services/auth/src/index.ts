@@ -1,4 +1,4 @@
-import { natsWrapper } from "./natswrapper";
+import { natsWrapper } from "./nats-wrapper";
 import mongoose from "mongoose";
 import app from "./app";
 
