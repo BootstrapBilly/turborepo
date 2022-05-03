@@ -51,13 +51,13 @@ const dateSchema = new mongoose.Schema(
 );
 
 dateSchema.statics.addNew = ({ name, date, userId }: IDateAttrs) => {
-  return new Day({
+  return new Date({
     name,
     date,
     userId,
   });
 };
 
-const Day = mongoose.model<IDateDocument, IDateModel>("Date", dateSchema);
+const Date = mongoose.model<IDateDocument, IDateModel>("Date", dateSchema);
 
-export default Day;
+export default Date;
