@@ -1,1 +1,1 @@
-import { AccountCreated } from "./account-created";
+export type { AccountCreatedEvent } from "./account-created";
