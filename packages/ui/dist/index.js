@@ -1,3 +1,4 @@
+"use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -16,7 +17,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
@@ -28,24 +32,28 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/components/button/Button.tsx
-var import_react = __toESM(require("react"));
 var import_styled_components = __toESM(require("styled-components"));
+var import_jsx_runtime = require("react/jsx-runtime");
 var ButtonContainer = import_styled_components.default.button`
   padding: 1rem;
   background-color: blue;
 `;
-var Button = ({ label }) => /* @__PURE__ */ import_react.default.createElement(ButtonContainer, null, label);
+var Button = ({ label }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ButtonContainer, {
+  children: label
+});
 var Button_default = Button;
 
 // src/components/header/Header.tsx
-var import_react2 = __toESM(require("react"));
 var import_styled_components2 = __toESM(require("styled-components"));
+var import_jsx_runtime = require("react/jsx-runtime");
 var HeaderContainer = import_styled_components2.default.div`
   display: flex;
   background-color: white;
   padding: 10px 0;
 `;
-var Header = ({ children }) => /* @__PURE__ */ import_react2.default.createElement(HeaderContainer, null, children);
+var Header = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeaderContainer, {
+  children
+});
 var Header_default = Header;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
