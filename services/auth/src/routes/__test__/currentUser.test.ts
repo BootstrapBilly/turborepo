@@ -2,6 +2,7 @@ import request from "supertest";
 import app from "../../app";
 
 it("returns the current user when they are signed in", async () => {
+  //
   const cookie = await signup();
 
   const res = await request(app)
