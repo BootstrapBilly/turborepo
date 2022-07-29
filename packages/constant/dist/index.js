@@ -19,7 +19,8 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  OFF_WHITE: () => OFF_WHITE
+  OFF_WHITE: () => OFF_WHITE,
+  weekdays: () => weekdays
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -27,7 +28,19 @@ module.exports = __toCommonJS(src_exports);
 var OFF_WHITE = {
   default: "#fbf7f5"
 };
+
+// src/date.ts
+var weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  OFF_WHITE
+  OFF_WHITE,
+  weekdays
 });

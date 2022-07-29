@@ -2,6 +2,10 @@ import express from "express";
 import { errorHandler } from "service-common";
 import { notFoundRouter } from "./routes";
 import cookieSession from "cookie-session";
+import dayjs from "dayjs";
+import isoWeek from "dayjs/plugin/isoWeek";
+
+dayjs.extend(isoWeek);
 
 const app = express();
 app.set("trust proxy", true); // trust traffic coming through nginx

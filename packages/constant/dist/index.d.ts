@@ -2,4 +2,6 @@ declare const OFF_WHITE: {
     default: string;
 };
 
-export { OFF_WHITE };
+declare const weekdays: string[];
+
+export { OFF_WHITE, weekdays };

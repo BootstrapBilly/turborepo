@@ -1,18 +1,17 @@
 import mongoose, { ObjectId } from "mongoose";
 import { IDayDocument } from "./Day";
 
-interface IDateAttrs {
+export interface IDateAttrs {
   name: string;
   date: Date;
-  userId: ObjectId;
-  day: IDayDocument;
+  userId: string;
 }
 
 interface IDateDocument extends mongoose.Document {
   name: string;
   date: Date;
-  userId: ObjectId;
-  day: IDateDocument;
+  userId: string;
+  day: IDayDocument;
 }
 
 interface IDateModel extends mongoose.Model<IDateDocument> {

@@ -24,7 +24,7 @@ spec:
             - name: MONGO_URI
               valueFrom:
                 secretKeyRef:
-                  name: mongo-uri
+                  name: mongo-uri-mealplan
                   key: MONGO_URI
             - name: NATS_CLUSTER_ID
               value: "fitness"
