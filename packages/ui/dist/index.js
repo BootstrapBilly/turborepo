@@ -49,7 +49,7 @@ var import_jsx_runtime = require("react/jsx-runtime");
 var HeaderContainer = import_styled_components2.default.div`
   display: flex;
   background-color: white;
-  padding: 10px 0;
+  padding: 11px 0;
 `;
 var Header = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeaderContainer, {
   children

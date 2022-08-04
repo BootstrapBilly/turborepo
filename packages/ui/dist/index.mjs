@@ -16,7 +16,7 @@ import { jsx as jsx2 } from "react/jsx-runtime";
 var HeaderContainer = styled2.div`
   display: flex;
   background-color: white;
-  padding: 10px 0;
+  padding: 11px 0;
 `;
 var Header = ({ children }) => /* @__PURE__ */ jsx2(HeaderContainer, {
   children
