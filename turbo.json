@@ -14,7 +14,7 @@
       "dependsOn": ["^build"],
       "outputs": ["coverage/**"]
     },
-    "test-ci-pull-request": {
+    "test-affected-packages": {
       "dependsOn": ["^build"],
       "outputs": ["coverage/**"]
     }

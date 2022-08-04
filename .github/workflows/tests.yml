@@ -7,9 +7,10 @@ on:
       - master
 
 jobs:
-  build:
+  build-run-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: yarn install --frozen-lockfile
-      - run: yarn turbo run test-ci-pull-request
+      - run: yarn turbo run build
+      - run: yarn turbo run test-affected-packages
