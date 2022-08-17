@@ -15,7 +15,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
     "test": "turbo run test",
-    "test-affected-packages": "turbo run test --filter=...[origin/master]"
+    "test-affected-packages": "turbo run test --filter=...[origin/master]",
+    "build-affected-packages": "turbo run build --filter=...[origin/master]"
   },
   "devDependencies": {
     "husky": "^7.0.4",

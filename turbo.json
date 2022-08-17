@@ -2,7 +2,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/**"]
+    },
+    "build-affected-packages": {
+      "dependsOn": ["^build-affected-packages"],
+      "outputs": ["dist/**"]
     },
     "lint": {
       "outputs": []
@@ -15,7 +19,7 @@
       "outputs": ["coverage/**"]
     },
     "test-affected-packages": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build-affected-packages"],
       "outputs": ["coverage/**"]
     }
   }
