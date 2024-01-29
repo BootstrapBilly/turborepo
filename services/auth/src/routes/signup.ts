@@ -39,10 +39,9 @@ router.post(
         id: user.id,
         email,
       },
-      process.env.JWT_KEY!, // ! means dont check for undefined
+      process.env.JWT_KEY!,
     );
 
-    // store the jwt on the req.session as a cookie
     req.session = {
       jwt: token,
     };

@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged && npx turbo run test --filter=...[origin/master]
+npx lint-staged && yarn test-affected-packages
