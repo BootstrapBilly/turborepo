@@ -1,1 +1,4 @@
-export const App = () => <div>good evening</div>
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+
+export const App = () => <RouterProvider router={router} />
