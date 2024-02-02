@@ -7,12 +7,13 @@ on:
     paths:
       - 'apps/web-client/**'
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   deploy-to-s3:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
