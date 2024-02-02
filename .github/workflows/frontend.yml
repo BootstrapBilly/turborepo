@@ -7,7 +7,7 @@ on:
       - 'apps/web-client/**'
 
 jobs:
-  build-test:
+  deploy-to-s3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,6 +16,6 @@ jobs:
         run: yarn install --frozen-lockfile --scope=web-client
 
       - name: build web client
-        run: yarn build --frozen-lockfile --scope=web-client
+        run: yarn build --scope=web-client
 
 
