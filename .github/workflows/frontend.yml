@@ -1,0 +1,21 @@
+name: Deploy web client
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'apps/web-client/**'
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install dependencies
+        run: yarn install --frozen-lockfile --scope=web-client
+
+      - name: build web client
+        run: yarn build --frozen-lockfile --scope=web-client
+
+
