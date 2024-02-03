@@ -32,7 +32,7 @@ jobs:
 
       - name: build web client
         env:
-          VITE_APP_COGNITO_REGION: ${{ secrets.COGNITO_REGION }}
+          VITE_APP_COGNITO_USER_POOL_ID: ${{ secrets.COGNITO_USER_POOL_ID }}
           VITE_APP_COGNITO_APP_CLIENT_ID: ${{ secrets.COGNITO_APP_CLIENT_ID }}
         run: yarn build --scope=web-client
 
