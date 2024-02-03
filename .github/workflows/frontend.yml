@@ -26,7 +26,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/web-client-ci-upload-to-s3
           role-session-name: GitHubActionsWebClientCI
-          web-identity-token-file: ${{ secrets.GITHUB_TOKEN }}
+          web-identity-token-file: ${{ github.token }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile --scope=web-client
