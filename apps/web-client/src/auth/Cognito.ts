@@ -8,6 +8,3 @@ export const cognitoConfig: ResourcesConfig = {
         }
     },
 };
-
-console.log(import.meta.env.VITE_APP_COGNITO_APP_CLIENT_ID.at(5))
-console.log(import.meta.env.VITE_APP_COGNITO_USER_POOL_ID.at(5))
