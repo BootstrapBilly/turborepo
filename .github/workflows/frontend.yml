@@ -31,6 +31,9 @@ jobs:
         run: yarn install --frozen-lockfile --scope=web-client
 
       - name: build web client
+        env:
+          VITE_APP_COGNITO_REGION: ${{ secrets.COGNITO_REGION }}
+          VITE_APP_COGNITO_APP_CLIENT_ID: ${{ secrets.COGNITO_APP_CLIENT_ID }}
         run: yarn build --scope=web-client
 
       - name: Deploy static site to S3 bucket
