@@ -81,20 +81,21 @@ export interface Product {
 }
 
 /**
- * DefaultApi - axios parameter creator
+ * ProductApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const ProductApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * 
+         * @summary Create a new product
          * @param {CreateProductDto} createProductDto 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        productControllerCreate: async (createProductDto: CreateProductDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        createProduct: async (createProductDto: CreateProductDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'createProductDto' is not null or undefined
-            assertParamExists('productControllerCreate', 'createProductDto', createProductDto)
+            assertParamExists('createProduct', 'createProductDto', createProductDto)
             const localVarPath = `/product`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -123,10 +124,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
+         * @summary List all products
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        productControllerList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listProducts: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/product`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -154,91 +156,97 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * ProductApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = DefaultApiAxiosParamCreator(configuration)
+export const ProductApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProductApiAxiosParamCreator(configuration)
     return {
         /**
          * 
+         * @summary Create a new product
          * @param {CreateProductDto} createProductDto 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async productControllerCreate(createProductDto: CreateProductDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Product>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.productControllerCreate(createProductDto, options);
+        async createProduct(createProductDto: CreateProductDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Product>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createProduct(createProductDto, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.productControllerCreate']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ProductApi.createProduct']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
+         * @summary List all products
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async productControllerList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Product>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.productControllerList(options);
+        async listProducts(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Product>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listProducts(options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.productControllerList']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['ProductApi.listProducts']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
 
 /**
- * DefaultApi - factory interface
+ * ProductApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = DefaultApiFp(configuration)
+export const ProductApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProductApiFp(configuration)
     return {
         /**
          * 
+         * @summary Create a new product
          * @param {CreateProductDto} createProductDto 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        productControllerCreate(createProductDto: CreateProductDto, options?: any): AxiosPromise<Product> {
-            return localVarFp.productControllerCreate(createProductDto, options).then((request) => request(axios, basePath));
+        createProduct(createProductDto: CreateProductDto, options?: any): AxiosPromise<Product> {
+            return localVarFp.createProduct(createProductDto, options).then((request) => request(axios, basePath));
         },
         /**
          * 
+         * @summary List all products
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        productControllerList(options?: any): AxiosPromise<Array<Product>> {
-            return localVarFp.productControllerList(options).then((request) => request(axios, basePath));
+        listProducts(options?: any): AxiosPromise<Array<Product>> {
+            return localVarFp.listProducts(options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * DefaultApi - object-oriented interface
+ * ProductApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class ProductApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
+export class ProductApi extends BaseAPI {
     /**
      * 
+     * @summary Create a new product
      * @param {CreateProductDto} createProductDto 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof ProductApi
      */
-    public productControllerCreate(createProductDto: CreateProductDto, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).productControllerCreate(createProductDto, options).then((request) => request(this.axios, this.basePath));
+    public createProduct(createProductDto: CreateProductDto, options?: RawAxiosRequestConfig) {
+        return ProductApiFp(this.configuration).createProduct(createProductDto, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
+     * @summary List all products
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof ProductApi
      */
-    public productControllerList(options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).productControllerList(options).then((request) => request(this.axios, this.basePath));
+    public listProducts(options?: RawAxiosRequestConfig) {
+        return ProductApiFp(this.configuration).listProducts(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
