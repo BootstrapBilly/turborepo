@@ -1,6 +1,7 @@
 name: Product Catalogue - Publish OpenAPI Package
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
