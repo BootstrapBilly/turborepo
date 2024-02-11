@@ -6,7 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "dev:service": "nest start --watch"
+    "dev:service": "nest start --watch",
+    "generate-open-api-package": "openapi-generator-cli generate -i http://localhost:3000/api-json -g typescript-axios -o ../../packages/api/product-catalogue/src"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
