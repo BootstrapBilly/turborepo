@@ -3,7 +3,7 @@ name: Product Catalogue - Publish OpenAPI Package
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'services/product-catalogue/VERSION'
 
