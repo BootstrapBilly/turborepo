@@ -1448,10 +1448,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@billy-catchpole/product-catalogue-open-api-client@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@billy-catchpole/product-catalogue-open-api-client/-/product-catalogue-open-api-client-0.0.1.tgz#228fdd24206cc4365d6acece2cb29205a661c85d"
-  integrity sha512-oeDZstEeo956RPIxZ+SnoMkErPmFX2y36a7+yg121MCkSnHPbnAljENyYtqyZGWrT0XEoeS2HYMGLtOuE72wug==
+"@billy-catchpole/product-catalogue-open-api-client@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@billy-catchpole/product-catalogue-open-api-client/-/product-catalogue-open-api-client-0.0.3.tgz#9a5fb8b01eb4ca8d67736de5bf5499fab3d0b16b"
+  integrity sha512-NZ1jxnHKEu+7jvgiNoiqro90/cHvpaOMDLik0dQsRUhEE6l3NBC04eqJ7kaYSBpqEsvf0NCT2APjbqy3F1qUtw==
 
 "@colors/colors@1.5.0":
   version "1.5.0"

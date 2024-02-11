@@ -21,7 +21,9 @@
             }
           }
         },
-        "tags": ["Product"]
+        "tags": [
+          "Product"
+        ]
       },
       "post": {
         "operationId": "createProduct",
@@ -49,7 +51,9 @@
             }
           }
         },
-        "tags": ["Product"]
+        "tags": [
+          "Product"
+        ]
       }
     }
   },
@@ -79,7 +83,12 @@
             "type": "number"
           }
         },
-        "required": ["id", "name", "description", "price"]
+        "required": [
+          "id",
+          "name",
+          "description",
+          "price"
+        ]
       },
       "CreateProductDto": {
         "type": "object",
@@ -94,7 +103,11 @@
             "type": "number"
           }
         },
-        "required": ["name", "description", "price"]
+        "required": [
+          "name",
+          "description",
+          "price"
+        ]
       }
     }
   }
