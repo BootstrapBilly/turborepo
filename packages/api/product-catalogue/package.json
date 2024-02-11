@@ -1,0 +1,6 @@
+{
+  "name": "@billy-catchpole/product-catalogue-open-api-client",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "types": "index.d.ts"
+}
