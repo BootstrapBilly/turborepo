@@ -17,6 +17,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18' 
+
+      - name: Install OpenAPI Generator CLI
+        run: npm install -g @openapitools/openapi-generator-cli
     
       - name: Generate OpenAPI package
         run: npm run generate-open-api-package
